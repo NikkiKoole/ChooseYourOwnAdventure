@@ -1,0 +1,47 @@
+# Builds every book on each push to main and publishes build/ to GitHub Pages.
+# One-time setup: Settings → Pages → Source: GitHub Actions.
+name: Publish books
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Build books and maps
+        run: |
+          mkdir -p build
+          echo '<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Books</title><ul>' > build/index.html
+          for d in books/*/; do
+            b=$(basename "$d")
+            python3 tools/build.py "$b"
+            python3 tools/check.py "$b" || true  # the map still gets written when the check finds errors
+            echo "<li><a href=\"$b.html\">$b</a> · <a href=\"$b-map.html\">map</a></li>" >> build/index.html
+          done
+          echo '</ul>' >> build/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+      - id: deploy
+        uses: actions/deploy-pages@v4

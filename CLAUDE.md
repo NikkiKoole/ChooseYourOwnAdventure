@@ -29,6 +29,8 @@ The five-liner, the Joepie, visible words, the exploding first sentence, Joep's 
 | `books/<book>/book.md` | What's true for one book: premise, characters, leading ingredients, money, recurring symbols, open decisions |
 | `books/<book>/passages/` | One markdown file per passage, format as in the playbook's Tools section |
 | `examples/` | The playbook examples as test files; not part of any book |
+| `AGENTS.md` | Short guide for other agents (e.g. a note-taking bot); points back here |
+| `.github/workflows/pages.yml` | Rebuilds every book on push to main and publishes `build/` to GitHub Pages |
 
 Everything at the top level is shared by all books. Current book: `parachute`. When working on passages, also read that book's `book.md`. If there's more than one book and it's unclear which is meant, ask.
 
@@ -48,4 +50,5 @@ Skills in `.claude/skills/`: `five-liner`, `iceberg`, `reader`, `map` (critics),
 
 - `python3 tools/check.py [book]`: checks links, orphans, dead ends, line counts, ending balance; writes the branch map to `build/<book>-map.html`. With no argument it checks the only book; `examples` checks the test files.
 - `python3 tools/check.py <book> <passage>`: where that passage comes from, where it leads, and the shortest path to it from the start. Use this instead of a `from:` field; parents are never stored in frontmatter.
-- `python3 tools/build.py [book]`: the clickable book at `build/<book>.html`. Assigns page numbers (start = 1, then reading order), adds "Turn to page N" and "THE END.", shows stubs as "not written yet".
+- `python3 tools/build.py [book]`: the clickable book at `build/<book>.html`. Assigns page numbers (start = 1, then reading order), adds "Turn to page N" and "THE END.", shows stubs as "not written yet". Opens at `#<page>` or `#<id>`.
+- `python3 tools/build.py <book> <passage>`: that one passage as plain text, as printed, for pasting into a chat. Writes nothing.

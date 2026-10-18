@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 """Build a clickable version of a book: one page at a time, like the printed book.
 
-Usage: python3 tools/build.py [book]
+Usage: python3 tools/build.py [book] [passage]
 
 Page numbers are assigned here (start = page 1, then in reading order), and
 the "Turn to page N" choices and "THE END." are added, as the playbook says.
 Stubs show as "not written yet". Output: build/<book>.html
+
+With a passage id, print that one passage as plain text instead, the way it
+would be printed, for pasting into a chat. Nothing is written.
+
+The HTML opens at a page number or a passage id: parachute.html#7 or
+parachute.html#lake-roof.
 """
 
 import html
@@ -50,12 +56,43 @@ def blocks(p):
     return out
 
 
+def preview(pid, passages, numbers):
+    """One passage as plain text, as printed: headings, THE END., Turn to page N."""
+    if pid not in passages:
+        sys.exit(f"No passage '{pid}'")
+    p = passages[pid]
+    out = [f"Page {numbers[pid]} · {pid} ({p.type}{', ' + p.meta['mood'] if p.meta.get('mood') else ''})", ""]
+    if p.meta.get("title"):
+        out += [p.meta["title"], ""]
+    if p.is_stub:
+        out.append("Not written yet.")
+        if p.meta.get("note"):
+            out.append(f"Note: {p.meta['note']}")
+        out.append("")
+    for head, lines in blocks(p):
+        if head:
+            out.append(f"~ {head} ~")
+        out += lines + [""]
+    if p.type == "ending":
+        out.append("THE END.")
+        if p.meta.get("card"):
+            out.append(p.meta["card"])
+    for c in p.choices:
+        if isinstance(c, dict):
+            to = numbers.get(str(c.get("to")))
+            out.append(f"{str(c.get('text', '')).rstrip('?')}? " + (f"Turn to page {to}." if to else "(page missing)"))
+    return "\n".join(out).strip()
+
+
 def main():
     name, folder = resolve(sys.argv[1] if len(sys.argv) > 1 else None)
     passages = load(folder, [])
     if not passages:
         sys.exit(f"{name}: no passages yet")
     numbers = page_numbers(passages)
+    if len(sys.argv) > 2:
+        print(preview(sys.argv[2], passages, numbers))
+        return
 
     pages = {}
     for pid, p in passages.items():
@@ -165,8 +202,13 @@ el.addEventListener("click", e => {
   const b = e.target.closest("button[data-to]");
   if (b) location.hash = b.dataset.to;
 });
-addEventListener("hashchange", () => show(+location.hash.slice(1)));
-show(+location.hash.slice(1) || 1);
+const BY_ID = Object.fromEntries(Object.entries(PAGES).map(([n, p]) => [p.id, +n]));
+const target = () => {
+  const h = decodeURIComponent(location.hash.slice(1));
+  return /^[0-9]+$/.test(h) ? +h : BY_ID[h] || 1;
+};
+addEventListener("hashchange", () => show(target()));
+show(target());
 </script>
 </body></html>
 """
