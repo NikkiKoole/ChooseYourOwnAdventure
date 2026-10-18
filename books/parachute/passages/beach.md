@@ -1,0 +1,4 @@
+---
+id: beach
+type: page
+---

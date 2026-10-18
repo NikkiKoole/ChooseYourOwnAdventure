@@ -1,0 +1,4 @@
+---
+id: cows
+type: page
+---
