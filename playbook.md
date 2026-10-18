@@ -172,7 +172,7 @@ The terms and references this playbook relies on, for anyone reading it fresh.
 
 | Term | Meaning |
 | --- | --- |
-| Joep Luycx | Dutch writer and writing trainer, founder of De Joepie Academie (2015) and the author's former teacher. Wrote *Schrijf wat je bedoelt* (2013). Source of the five-liner, Joepie and Ernie/Bert methods. Full method in his book *Doe als ik, schrijf als jij* (PDF in the project). He asks to be credited when his ideas are used |
+| Joep Luycx | Dutch writer and writing trainer, founder of De Joepie Academie (2015) and the author's former teacher. Wrote *Schrijf wat je bedoelt* (2013). Source of the five-liner, Joepie and Ernie/Bert methods. Full method in his book *Doe als ik, schrijf als jij* (a local copy, not in the repo: it's copyrighted). He asks to be credited when his ideas are used |
 | Michael Silverstein | American linguist and anthropologist (1945–2020). Joep bases visible words on his animacy hierarchy, flattened to two kinds of words: words you can see and contourless ones (Joep credits Silverstein with the word "contourless") |
 | Five-liner (vijflijner) | A single block of five lines. Joep's basic unit, and the rule for every normal page here |
 | Joepie | Title + three blocks of five lines, each with a heading. Built from associations and visible words: write four paragraphs, pick three, try different orders, add headings as bridges, a why-title with an absurd adjective, and a last line that is an invitation ("Wil jij…?") |

@@ -7,7 +7,7 @@ description: Bert-review one or more passages against Joep Luycx's five-liner me
 
 Based on the method of **Joep Luycx**, *Doe als ik, schrijf als jij* (De Joepie Academie). Joep asks to be credited when his ideas are used: always end the review with the credit line below.
 
-The full method is in `sources/joep-doe-als-ik-schrijf-als-jij.md`. The book's own rules are in `playbook.md` (Style, Examples).
+The full method is in `sources/joep-doe-als-ik-schrijf-als-jij.md` (only on the author's machine; it is not in the repo). The book's own rules are in `playbook.md` (Style, Examples).
 
 ## Who does what
 

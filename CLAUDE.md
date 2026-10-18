@@ -23,7 +23,7 @@ The five-liner, the Joepie, visible words, the exploding first sentence, Joep's 
 | Path | What it is |
 | --- | --- |
 | `playbook.md` | The rulebook. Source of truth |
-| `sources/joep-doe-als-ik-schrijf-als-jij.md` | Joep Luycx's method, *Doe als ik, schrijf als jij* (Dutch). Source for the five-liner skill |
+| `sources/joep-doe-als-ik-schrijf-als-jij.md` | Joep Luycx's method, *Doe als ik, schrijf als jij* (Dutch). Source for the five-liner skill. Local only: his book is copyrighted, so `sources/` is gitignored and never pushed |
 | `pile.md` | Ingredients for sparks (the only copy; the playbook points here) |
 | `tank.md` | Rejected sparks, kept for later |
 | `books/<book>/book.md` | What's true for one book: premise, characters, leading ingredients, money, recurring symbols, open decisions |
