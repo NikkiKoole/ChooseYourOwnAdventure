@@ -1,6 +1,6 @@
 ---
 name: spark
-description: Help the author get unstuck with a spark, never a page. Draws one or two ingredients from pile.md (random or targeted), translates hand-drawn tarot cards into prompts, guides Joep Luycx's warm-up, or asks "what's the worst thing that could happen now?". Use when the author is stuck, asks for a spark, a card reading, or the warm-up.
+description: Help the author get unstuck with a spark, never a page. Draws one or two ingredients from pile.md (random or targeted), translates hand-drawn tarot cards into prompts, guides Joep Luycx's warm-up or Hemingway's one true sentence, or asks "what's the worst thing that could happen now?". Use when the author is stuck, asks for a spark, a card reading, or the warm-up.
 ---
 
 # Spark (an unstuck skill)
@@ -15,7 +15,7 @@ Read `pile.md`, `tank.md`, the "Rules for sparks" in `playbook.md`, and the book
 
 ## Modes
 
-Pick the mode from what the author asks. If unclear, offer the five in one line.
+Pick the mode from what the author asks. If unclear, offer the six in one line.
 
 **1. Draw** (default)
 - Random: pick with a real random draw, `python3 -c "import random; ..."` over the pile rows, so it isn't your taste choosing.
@@ -51,6 +51,9 @@ Look back over pages already written through one pile ingredient. Same rules as 
 **4. Worst thing**
 Ask "What's the worst thing that could happen now?" Then, after their answer, at most two follow-up questions (Who's watching? What does it cost?).
 
+**6. One true sentence** (Hemingway's, *A Moveable Feast*)
+When the author is stuck on a blank page: "Write the truest sentence you know about this moment." Then wait. Don't suggest the sentence. After it, they write on with Ernie. Credit Hemingway when you use it.
+
 ## Rules to hold the spark to
 
 - Story first: if the author hasn't said what the passage needs, ask that before drawing.
@@ -64,3 +67,4 @@ Ask "What's the worst thing that could happen now?" Then, after their answer, at
 
 - If the author keeps a spark, suggest they add `spark: <ingredient or card>` to the passage frontmatter so the Map skill can track it.
 - If the author rejects one, offer to add it to `tank.md` as `- <date> · <spark> · <why not now>`. Only write it when they say yes.
+- If the author is stopping for the day, pass on Hemingway's habit once: stop while you still know what happens next, so tomorrow starts easy.

@@ -162,7 +162,7 @@ Optional fields: `start: true` on the one opening passage, `character` (default 
 | Iceberg | What to cut (explaining, preaching, broken deadpan) and whether anything is under the water |
 | Reader | The kid alone, the parent along, and the read-aloud ear |
 | Map | Runs the checker, then reads the structure: bottlenecks, cheap endings, payoffs of weird things, character paths |
-| Spark | Unstuck: one or two pile ingredients plus a question, tarot cards you drew turned into prompts, Joep's warm-up, or "what's the worst that could happen?" Inspired by Brian Eno and Peter Schmidt's Oblique Strategies |
+| Spark | Unstuck: one or two pile ingredients plus a question, tarot cards you drew turned into prompts, Joep's warm-up, Hemingway's one true sentence, or "what's the worst that could happen?" Inspired by Brian Eno and Peter Schmidt's Oblique Strategies |
 
 Tarot, inside Spark: you draw the cards by hand. One card per passage, three for a scene (situation, obstacle, outcome), or one per choice. Suits as flavors: Wands action, Cups feelings, Swords conflict, Pentacles money. Reversed means a twist.
 
@@ -173,11 +173,12 @@ The terms and references this playbook relies on, for anyone reading it fresh.
 | Term | Meaning |
 | --- | --- |
 | Joep Luycx | Dutch writer and writing trainer, founder of De Joepie Academie (2015) and the author's former teacher. Wrote *Schrijf wat je bedoelt* (2013). Source of the five-liner, Joepie and Ernie/Bert methods. Full method in his book *Doe als ik, schrijf als jij* (PDF in the project). He asks to be credited when his ideas are used |
+| Michael Silverstein | American linguist and anthropologist (1945–2020). Joep bases visible words on his animacy hierarchy, flattened to two kinds of words: words you can see and contourless ones (Joep credits Silverstein with the word "contourless") |
 | Five-liner (vijflijner) | A single block of five lines. Joep's basic unit, and the rule for every normal page here |
 | Joepie | Title + three blocks of five lines, each with a heading. Built from associations and visible words: write four paragraphs, pick three, try different orders, add headings as bridges, a why-title with an absurd adjective, and a last line that is an invitation ("Wil jij…?") |
 | Exploding first sentence | Joep's idea of an opening line that works like a little bomb, popping the cork so the rest flows |
 | Joep's warm-up | Pick a letter, write three words, choose the most appealing, add five associations, pick the clearest picture, write an "I – verb – the rest" sentence, make it as short as possible, then write on to five sentences |
-| Iceberg theory | Hemingway's principle: show only the tip; if the writer knows what's underneath, the reader feels it without being told |
+| Iceberg theory | Hemingway's principle (*Death in the Afternoon*, 1932, chapter 16): show only the tip; if the writer knows what's underneath, the reader feels it without being told. Leaving out what you don't know only makes "hollow places" |
 | Manatee balls | From South Park's "Cartoon Wars", which joked that Family Guy's gags are random idea balls combined by manatees. Our term for a spark with no connection to the story |
 | Oblique Strategies | Brian Eno and Peter Schmidt's 1975 card deck of cryptic prompts for breaking creative blocks. Model for the spark skill |
 | Branch and bottleneck | A gamebook structure where paths split and then rejoin at key scenes |

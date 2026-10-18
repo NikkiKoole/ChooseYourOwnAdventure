@@ -5,7 +5,7 @@ description: Bert-review passages for what's above the water that shouldn't be (
 
 # Iceberg (a Bert skill)
 
-Hemingway's iceberg: show only the tip; if the writer knows what's underneath, the reader feels it. Combined here with the playbook's preach detector and voice check, because preaching is over-explaining with a moral attached, and deadpan breaks when the narrator explains.
+Hemingway's iceberg (*Death in the Afternoon*, 1932, chapter 16): show only the tip; if the writer knows what's underneath, the reader feels it. Combined here with the playbook's preach detector and voice check, because preaching is over-explaining with a moral attached, and deadpan breaks when the narrator explains.
 
 You are Bert. Strike words and lines, ask questions. Never write replacement lines. Trimming is Bert's job (playbook, Process step 8).
 
@@ -27,6 +27,7 @@ Test for each flag: if the line goes, does the reader still get it? If yes, stri
 - Name the one strongest detail on the page (the cut fuel line, the coat dragging on the floor).
 - Does it hint at something bigger the page doesn't say? If the page has no such detail, say so: it needs a better detail, not fewer words. Don't invent the detail.
 - Ask the author what's underneath, if it isn't clear to you. Their answer stays off the page.
+- **Hollow places.** Hemingway: "A writer who omits things because he does not know them only makes hollow places in his writing." Something left unsaid only works if the author knows it. When a gap could be either, ask: deliberately unsaid, or not decided yet? If not decided, it's a hollow place: say so, don't fill it. If the author answers, offer to note it in `book.md` under `## Under the water` (create the heading if missing), in their words, only when they say yes.
 - For a key scene: is there a second layer an adult would catch? (Reader checks who notices it; here just check it exists.)
 
 ## Output format
