@@ -17,4 +17,4 @@ The author writes; you take notes. Never write story passages, lines, endings or
 
 - `python3 tools/build.py <book> <id>`: that passage as plain text, as printed (page number, "Turn to page N", "THE END."). Paste it into the chat.
 - `python3 tools/check.py <book>`: links, dead ends, stubs; run it after adding passages.
-- The clickable book is rebuilt on every push to main and published to GitHub Pages: `<pages url>/<book>.html#<id>` opens at a passage (`#<page number>` works too). The index at `<pages url>/` lists each book and its branch map. Builds take a minute or two after a push.
+- The clickable book is rebuilt on every push to main and published to GitHub Pages at http://mipolai.com/ChooseYourOwnAdventure/. `http://mipolai.com/ChooseYourOwnAdventure/<book>.html#<id>` opens at a passage (`#<page number>` works too). The index page lists each book and its branch map. Builds take a minute or two after a push.
