@@ -1,4 +1,4 @@
-# Builds every book on each push to main and publishes build/ to GitHub Pages.
+# Builds every book on each push to main and publishes them to GitHub Pages.
 # One-time setup: Settings → Pages → Source: GitHub Actions.
 name: Publish books
 
@@ -29,19 +29,23 @@ jobs:
           python-version: "3.12"
       - run: pip install pyyaml
       - name: Build books and maps
+        # Each book gets its own folder: <book>/ is the book, <book>/map.html its branch map.
         run: |
-          mkdir -p build
-          echo '<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Books</title><ul>' > build/index.html
+          mkdir -p site
+          echo '<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Books</title><ul>' > site/index.html
           for d in books/*/; do
             b=$(basename "$d")
             python3 tools/build.py "$b"
             python3 tools/check.py "$b" || true  # the map still gets written when the check finds errors
-            echo "<li><a href=\"$b.html\">$b</a> · <a href=\"$b-map.html\">map</a></li>" >> build/index.html
+            mkdir -p "site/$b"
+            cp "build/$b.html" "site/$b/index.html"
+            cp "build/$b-map.html" "site/$b/map.html"
+            echo "<li><a href=\"$b/\">$b</a> · <a href=\"$b/map.html\">map</a></li>" >> site/index.html
           done
-          echo '</ul>' >> build/index.html
+          echo '</ul>' >> site/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: site
       - id: deploy
         uses: actions/deploy-pages@v4

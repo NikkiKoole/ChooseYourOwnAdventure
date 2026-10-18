@@ -30,7 +30,7 @@ The five-liner, the Joepie, visible words, the exploding first sentence, Joep's 
 | `books/<book>/passages/` | One markdown file per passage, format as in the playbook's Tools section |
 | `examples/` | The playbook examples as test files; not part of any book |
 | `AGENTS.md` | Short guide for other agents (e.g. a note-taking bot); points back here |
-| `.github/workflows/pages.yml` | Rebuilds every book on push to main and publishes `build/` to GitHub Pages |
+| `.github/workflows/pages.yml` | Rebuilds every book on push to main and publishes each book to GitHub Pages at `<book>/` |
 
 Everything at the top level is shared by all books. Current book: `parachute`. When working on passages, also read that book's `book.md`. If there's more than one book and it's unclear which is meant, ask.
 
