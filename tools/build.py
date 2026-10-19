@@ -68,6 +68,8 @@ def preview(pid, passages, numbers):
         out.append("Not written yet.")
         if p.meta.get("note"):
             out.append(f"Note: {p.meta['note']}")
+        if p.meta.get("suggestion"):
+            out.append(f"Suggestion (not the author's): {p.meta['suggestion']}")
         out.append("")
     for head, lines in blocks(p):
         if head:
@@ -104,6 +106,7 @@ def main():
             "card": p.meta.get("card"),
             "stub": p.is_stub,
             "note": p.meta.get("note"),
+            "suggestion": p.meta.get("suggestion"),
             "blocks": blocks(p),
             "choices": [
                 {"text": c.get("text", ""), "to": numbers.get(str(c.get("to")))}
@@ -157,6 +160,7 @@ TEMPLATE = """<!doctype html>
   .end.bad { color: var(--accent); } .end.good { color: var(--good); }
   .cardline { font-style: italic; color: var(--soft); }
   .stub { color: var(--stub); font-style: italic; }
+  .suggestion { color: var(--stub); font: 13px/1.4 system-ui, sans-serif; border-left: 2px dashed var(--line); padding-left: 10px; }
   .choices { display: grid; gap: 10px; margin-top: 8px; }
   .choices button { font: inherit; font-size: 17px; text-align: left; cursor: pointer;
     background: transparent; color: var(--ink); border: 1px solid var(--line);
@@ -180,7 +184,8 @@ function show(n) {
   n = PAGES[n] ? n : 1;
   let h = p.title ? `<h1>${esc(p.title)}</h1>` : "";
   if (p.stub) h += `<p class="stub">This page isn't written yet. (${esc(p.id)})</p>`
-    + (p.note ? `<p class="stub">Note: ${esc(p.note)}</p>` : "");
+    + (p.note ? `<p class="stub">Note: ${esc(p.note)}</p>` : "")
+    + (p.suggestion ? `<p class="suggestion">Suggestion (not the author's): ${esc(p.suggestion)}</p>` : "");
   for (const [head, lines] of p.blocks) {
     if (head) h += `<h2>${esc(head)}</h2>`;
     h += `<p>${lines.map(esc).join("<br>")}</p>`;

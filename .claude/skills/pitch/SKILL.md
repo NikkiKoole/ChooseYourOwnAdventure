@@ -52,6 +52,6 @@ The ideas come first. You may offer **one** DRAFT of the page when they ask for 
 
 They write the page. A DRAFT stays in the chat. Save text only after they have edited or rewritten it and asked to save that version, verbatim, typos included.
 
-Offer once to put the chosen idea in the stub's `note:` field, **in the author's words**. Write it only when they say yes, and only the words they used. Don't tidy spelling or shape. If they pointed at idea 2 without restating it, ask them to say the note out loud first.
+Offer once to put the chosen idea in the stub's `note:` field, **in the author's words**. Write it only when they say yes, and only the words they used. Don't tidy spelling or shape. If they pointed at idea 2 without restating it, ask them to say the note out loud first. If they want to keep your line as it is, it goes in `suggestion:`, never in `note:`.
 
 If the idea needs a passage that has no file yet, offer to create that target as a stub: frontmatter only (`id`, `type`), no text. Only when they say yes. If they described it, the description goes in `note:`, in their words.

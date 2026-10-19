@@ -13,7 +13,7 @@ Dictated words are saved verbatim. Typos stay. You may offer one DRAFT, labeled 
 
 1. The author names a stub (frontmatter, no text). If that file already has text, stop and ask whether they mean a different stub. Don't interview over a page they have written.
 2. If several books exist and they didn't name one, ask. Read that book's `book.md`, the stub, and `python3 tools/check.py <book> <passage>`, so you know what leads here. Use it to aim the question. Don't tell them what the page should be.
-3. A `note:` is theirs. The first question may point at it ("You noted: …. What happens on this page?"). Don't expand the note.
+3. A `note:` is theirs. The first question may point at it ("You noted: …. What happens on this page?"). Don't expand the note. A `suggestion:` is not theirs: mention it only as an agent's idea, and ask whether they want it. Never present it as something they said.
 
 ## One question, then wait
 
@@ -41,7 +41,7 @@ Only when they ask for wording, or when a question has gone nowhere. One draft. 
 Save when they say save. Until then, the file stays as it was. A DRAFT is never what you save. If they edit or rewrite it and ask to save that version, save their version verbatim.
 
 - Write `books/<book>/passages/<id>.md` in the playbook's format (Tools).
-- Keep frontmatter fields they didn't talk about (`note`, `character`, `spark`, `start`). Don't wipe them. Don't add a field they didn't ask for. Never add `from:`.
+- Keep frontmatter fields they didn't talk about (`note`, `suggestion`, `character`, `spark`, `start`). Don't wipe them. Don't add a field they didn't ask for. Never add `from:`.
 - Set `type` from their answer: `page`, `joepie`, or `ending`. Set `mood` to `good` or `bad` only if they said so. A `title` only if they gave one.
 - `choices:` live only in the frontmatter, each with `text` and `to`. The `text` is their label, verbatim. If they didn't give an id for `to`, ask for one before saving. Don't invent a destination's story. If they say you may name the file, use a short slug of their label and tell them the name you used.
 - The body is their answer to what happens, in the order they gave it, with their line breaks. One spoken block stays one block. Don't break it into a five-liner, don't add an invitation, don't add "Turn to page" or "THE END." The build adds those.

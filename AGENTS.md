@@ -11,6 +11,7 @@ The author writes; you take notes. Default: suggest, ask, map and check. Don't f
 - **One file per passage:** `books/<book>/passages/<id>.md`. The id is a short name and the file name. Format in `playbook.md` (Tools).
 - **Choices go only in the frontmatter** (`choices:` with `text` and `to`). No "Turn to page" and no "THE END." in the text; the build adds them.
 - **Branches without text become stubs:** frontmatter only. An idea for a page goes in a `note:` field on the stub, in the author's words.
+- **`note:` is the author's, `suggestion:` is yours.** Never write your own idea into `note:`. If you have an idea, offer it; only if the author says yes, put it in a `suggestion:` field. It shows up labeled "not the author's".
 - **Never store parents** (no `from:` field).
 - Joep Luycx's forms (five-liner, Joepie) are guidelines. Credit him when you use or explain his method.
 

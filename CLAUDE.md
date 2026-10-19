@@ -42,7 +42,7 @@ Full format in `playbook.md` (Tools). In short:
 - Ids are short names, not numbers; the file name is the id: `books/parachute/passages/lake-roof.md`. Page numbers are assigned at build time. Ids only need to be unique within a book.
 - Choices live only in the frontmatter. No "Turn to page" and no "THE END." in the text; the build adds them.
 - Joep's forms are guidelines, not hard rules. Line counts are warnings, never errors.
-- A stub is a passage with only frontmatter (no text, no choices). The checker lists stubs as "to write", not as dead ends. When the author sketches branches, create the targets as stubs. When they give an idea for a page but not its text, put the idea in a `note:` field on the stub, in their words.
+- A stub is a passage with only frontmatter (no text, no choices). The checker lists stubs as "to write", not as dead ends. When the author sketches branches, create the targets as stubs. When they give an idea for a page but not its text, put the idea in a `note:` field on the stub, in their words. `note:` is only ever the author's words. An idea from Claude or another agent goes in `suggestion:`, only when the author says yes to it, and never in `note:`. The author adopts a suggestion by saying it in their own words (it then goes in `note:`), or it is deleted.
 - Skeleton drafts go in as the author wrote them, typos and all. Never fix anything automatically: typos only when the author runs `/typos` or asks; critique only when asked.
 
 ## Tools

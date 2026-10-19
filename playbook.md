@@ -150,7 +150,7 @@ A gardener stares at you, hose in hand.
 
 A Joepie: `type: joepie`, a `title`, then three blocks each under a `## Heading`, then the invitation line.
 
-Optional fields: `start: true` on the one opening passage, `character` (default `any`), `spark` (the pile ingredient or tarot card used, so Map can track what's been missing), `note` (an idea for a page that isn't written yet; shown by the checker and in the clickable book).
+Optional fields: `start: true` on the one opening passage, `character` (default `any`), `spark` (the pile ingredient or tarot card used, so Map can track what's been missing), `note` (the author's idea for a page that isn't written yet, in their words; shown by the checker and in the clickable book), `suggestion` (an idea from an agent, never the author's words; shown separately and labeled "not the author's"). Agents never write `note`. To adopt a suggestion, the author says it in their own words and it goes into `note`; otherwise it is deleted.
 
 `tools/check.py <book>` checks broken links, orphan pages, dead ends, line counts and ending balance, and draws the branch map. `tools/build.py <book>` makes the clickable version. Later: character paths and the printed book.
 

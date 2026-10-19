@@ -12,7 +12,7 @@ Playbook, Rules for sparks: everything weird pays off. A strange symbol returns 
 ## First
 
 1. Name the book (ask if there are several). Read its `book.md`, especially recurring symbols, money, characters, leading ingredients and open decisions.
-2. Read every file in `books/<book>/passages/`, stubs included. A `note:` counts: the author has already planted something.
+2. Read every file in `books/<book>/passages/`, stubs included. A `note:` counts: the author has already planted something. A `suggestion:` is an agent's idea, not a promise: list it apart, as "suggested, not decided".
 3. Run `python3 tools/check.py <book>` for orphans and the map. A thing returns when a later passage mentions it. When you need to know whether a reader can get there, run `python3 tools/check.py <book> <passage>` on that later page.
 4. Read `pile.md` only to recognise a leading ingredient when it shows up (money, a report card). Don't draw a new spark.
 

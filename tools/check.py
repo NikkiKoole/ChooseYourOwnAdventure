@@ -335,6 +335,8 @@ def show_passage(pid, passages):
     print(f"{pid} ({state})")
     if p.meta.get("note"):
         print(f"Note:        {p.meta['note']}")
+    if p.meta.get("suggestion"):
+        print(f"Suggestion:  {p.meta['suggestion']}  (not the author's)")
 
     parents = [(i, label_of(q, pid)) for i, q in passages.items() if pid in q.targets]
     print("\nComes from:  " + (", ".join(f'{i} ("{t}")' for i, t in parents) if parents else ("nowhere (this is the start)" if p.meta.get("start") else "nowhere")))
@@ -405,6 +407,9 @@ def main():
     stubs = [p.id for p in passages.values() if p.is_stub]
     if stubs:
         print(f"\nTo write ({len(stubs)}): {', '.join(stubs)}")
+    suggested = [p.id for p in passages.values() if p.meta.get("suggestion")]
+    if suggested:
+        print(f"\nSuggestions waiting for the author ({len(suggested)}): {', '.join(suggested)}")
     print(f"\nErrors ({len(errors)}):" if errors else "\nErrors: none")
     for e in errors:
         print(f"  ✗ {e}")
