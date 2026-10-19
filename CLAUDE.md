@@ -46,7 +46,7 @@ Full format in `playbook.md` (Tools). In short:
 
 ## Tools
 
-Skills in `.claude/skills/`: `five-liner`, `iceberg`, `reader`, `map` (critics), `spark` (unstuck) and `typos` (obvious typos only, on request). None of them writes the page.
+Skills in `.claude/skills/`: `five-liner`, `iceberg`, `reader`, `map` (critics), `spark` (unstuck), `typos` (obvious typos only, on request), `pitch` (where a branch could go), `continuity` (where things return), `endings` (which endings are missing) and `interview` (one question at a time, then the author's words). None of them writes the page. They suggest, ask, track, or, in `interview`, save the author's own words, typos and all.
 
 - `python3 tools/check.py [book]`: checks links, orphans, dead ends, line counts, ending balance; writes the branch map to `build/<book>-map.html`. With no argument it checks the only book; `examples` checks the test files.
 - `python3 tools/check.py <book> <passage>`: where that passage comes from, where it leads, and the shortest path to it from the start. Use this instead of a `from:` field; parents are never stored in frontmatter.

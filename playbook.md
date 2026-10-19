@@ -154,7 +154,7 @@ Optional fields: `start: true` on the one opening passage, `character` (default 
 
 `tools/check.py <book>` checks broken links, orphan pages, dead ends, line counts and ending balance, and draws the branch map. `tools/build.py <book>` makes the clickable version. Later: character paths and the printed book.
 
-**Skills** (in `.claude/skills/`). Four critics and one unstuck button; none of them writes the page.
+**Skills** (in `.claude/skills/`). Critics, an unstuck button, and keepers for branches, continuity and endings. None of them writes the page. Interview only saves the author's own words.
 
 | Skill | What it does |
 | --- | --- |
@@ -163,6 +163,10 @@ Optional fields: `start: true` on the one opening passage, `character` (default 
 | Reader | The kid alone, the parent along, and the read-aloud ear |
 | Map | Runs the checker, then reads the structure: bottlenecks, cheap endings, payoffs of weird things, character paths |
 | Spark | Unstuck: one or two pile ingredients plus a question, tarot cards you drew turned into prompts, Joep's warm-up, Hemingway's one true sentence, or "what's the worst that could happen?" Inspired by Brian Eno and Peter Schmidt's Oblique Strategies |
+| Pitch | 3 to 5 one-line ideas for where a stub or passage could go next; the author picks and writes |
+| Continuity | Where each recurring thing first appears, where it returns, and what is still open |
+| Endings | Which kinds of endings exist and which are missing or unbalanced; the kind and the branch, never the text |
+| Interview | One question at a time about a stub, then the author's answers saved verbatim |
 
 Tarot, inside Spark: you draw the cards by hand. One card per passage, three for a scene (situation, obstacle, outcome), or one per choice. Suits as flavors: Wands action, Cups feelings, Swords conflict, Pentacles money. Reversed means a twist.
 
