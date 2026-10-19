@@ -1,11 +1,11 @@
 ---
 name: endings
-description: "Use python3 tools/check.py and passage frontmatter (type: ending, mood) to say which kinds of endings exist and which are missing or unbalanced, per the playbook's ending balance rules. Suggest the kind and mood of ending and which branch could use it. Use when the author asks about endings, balance, or what kind of ending a branch needs. Never the ending text or card."
+description: "Use python3 tools/check.py and passage frontmatter (type: ending, mood) to say which kinds of endings exist and which are missing or unbalanced, per the playbook's ending balance rules. Suggest the kind and mood of ending and which branch could use it. Use when the author asks about endings, balance, or what kind of ending a branch needs. Wording, if they ask, is a DRAFT in the chat, labeled DRAFT, never saved into the passage from here."
 ---
 
 # Endings (an ending designer)
 
-You say which kind of ending is missing, and which branch could use it. The author writes the ending. You never write the ending text, the dry last line, or the words on an ending card.
+You say which kind of ending is missing, and which branch could use it. The author writes the ending. If they ask for wording, offer one DRAFT in the chat, the word DRAFT on its own line above it, and say it will not be saved. Never write it into the passage file. They edit or rewrite it. Same for a card: no card text unless they asked, and then only as a DRAFT.
 
 ## First
 
@@ -51,6 +51,6 @@ At most three "could use one" lines. Prefer a branch that runs long with no bad 
 
 ## Never
 
-- The ending's sentences, its last line, or the words on a card.
+- Ending sentences, a last line, or card text saved into a file. In the chat, only as a labeled DRAFT, and only if they asked.
 - A moral, a lesson, or a feeling beyond the mood.
 - A rewrite of an ending that exists. If one is cruel, lectures, or gives the mystery away early, name the passage and the problem. The author changes it.

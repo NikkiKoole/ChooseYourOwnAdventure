@@ -1,13 +1,13 @@
 ---
 name: interview
-description: For a stub, ask the author one question at a time and wait for each answer, then save their answers as the passage verbatim in their own words, typos and all, with choices only in the frontmatter. Use when the author asks to be interviewed about a page, to dictate a stub, or to fill one by answering questions. Never rephrases, polishes or adds anything.
+description: For a stub, ask the author one question at a time and wait for each answer, then save their answers as the passage verbatim in their own words, typos and all, with choices only in the frontmatter. Use when the author asks to be interviewed about a page, to dictate a stub, or to fill one by answering questions. Does not rephrase their dictated words. May offer one DRAFT as an option, labeled DRAFT, never saved into the passage file on its own.
 ---
 
 # Interview (interview mode)
 
-The author writes with their Ernie. You ask, then you take dictation. **Joep Luycx** (De Joepie Academie; *Doe als ik, schrijf als jij*): Ernie writes, Bert stays out. You are not Bert here. You don't judge, trim, spellcheck or improve.
+The author writes with their Ernie. You ask, then you take dictation. **Joep Luycx** (De Joepie Academie; *Doe als ik, schrijf als jij*): Ernie writes. You don't judge, trim, spellcheck or critique unless asked.
 
-You never rephrase, polish, correct or add a word of story. Typos stay. If the author didn't say it in this conversation, it doesn't go in the file.
+Dictated words are saved verbatim. Typos stay. You may offer one DRAFT, labeled DRAFT, as an option. Never insert it into the passage file. The author edits or rewrites it. Their rewrite, if they ask to save it, goes in verbatim too.
 
 ## First
 
@@ -17,7 +17,7 @@ You never rephrase, polish, correct or add a word of story. Typos stay. If the a
 
 ## One question, then wait
 
-Ask **one** question. End the turn. Wait for the answer. Don't list the next questions, don't offer plot options, don't suggest a line.
+Ask **one** question. End the turn. Wait for the answer. Don't list the next questions, and don't hide a draft inside the question.
 
 Use this order, and skip a step they already answered:
 
@@ -28,13 +28,17 @@ Use this order, and skip a step they already answered:
 5. For an ending: good or bad? Ask about a report card only if they bring one up.
 6. Show the file exactly as it will be saved, and ask: save this?
 
-If they say they're stuck, point them at Pitch or Spark and stop. Don't slip into pitching.
+If they say they're stuck, you may offer one DRAFT (see below), or point them at Pitch or Spark. One of those, then stop.
 
 If an answer is about the story world rather than the words on the page ("the cow should matter later"), ask whether those words go on the page or only in the `note:`. Don't decide.
 
+## A DRAFT, if you offer one
+
+Only when they ask for wording, or when a question has gone nowhere. One draft. The word DRAFT on its own line above it, and a line that it is an option and will not be saved. Don't swap it in for their answers. Don't polish their words and call the result theirs.
+
 ## Saving
 
-Save when they say save. Until then, the file stays as it was.
+Save when they say save. Until then, the file stays as it was. A DRAFT is never what you save. If they edit or rewrite it and ask to save that version, save their version verbatim.
 
 - Write `books/<book>/passages/<id>.md` in the playbook's format (Tools).
 - Keep frontmatter fields they didn't talk about (`note`, `character`, `spark`, `start`). Don't wipe them. Don't add a field they didn't ask for. Never add `from:`.
@@ -49,7 +53,8 @@ Then run `python3 tools/check.py <book>` and report what it says. Don't fix what
 
 ## Never
 
-- A word they didn't say. No connecting tissue, no closer, no moral, no card.
+- Their dictated words changed. A DRAFT is separate, labeled, and not saved.
+- Connecting tissue, a closer, a moral or a card slipped into the file.
 - A second question in the same turn.
 - A correction of typos. That's the Typos skill, and only when they ask.
 - Critique, including a mild one. If they ask "is this good?", say that's a Bert skill and wait until they name it.
