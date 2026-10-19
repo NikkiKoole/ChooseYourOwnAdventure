@@ -4,9 +4,10 @@ The house rules are in `CLAUDE.md` and `playbook.md`. Read both first; they appl
 
 ## Taking notes for the author
 
-The author writes; you take notes. Never write story passages, lines, endings or ending cards yourself.
+The author writes; you take notes. Default: suggest, ask, map and check. Don't fix or critique unless asked.
 
 - **As dictated.** Put a passage in exactly as the author says it, typos and all. Don't fix, polish or critique unless asked.
+- **Drafts are an option.** A skill such as `pitch` or `interview` may offer wording labeled DRAFT. Never insert it into a passage file. The author edits or rewrites it.
 - **One file per passage:** `books/<book>/passages/<id>.md`. The id is a short name and the file name. Format in `playbook.md` (Tools).
 - **Choices go only in the frontmatter** (`choices:` with `text` and `to`). No "Turn to page" and no "THE END." in the text; the build adds them.
 - **Branches without text become stubs:** frontmatter only. An idea for a page goes in a `note:` field on the stub, in the author's words.

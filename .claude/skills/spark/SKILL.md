@@ -1,13 +1,13 @@
 ---
 name: spark
-description: Help the author get unstuck with a spark, never a page. Draws one or two ingredients from pile.md (random or targeted), translates hand-drawn tarot cards into prompts, guides Joep Luycx's warm-up or Hemingway's one true sentence, or asks "what's the worst thing that could happen now?". Use when the author is stuck, asks for a spark, a card reading, or the warm-up.
+description: Help the author get unstuck with a spark, a prompt rather than a page. Draws one or two ingredients from pile.md (random or targeted), translates hand-drawn tarot cards into prompts, guides Joep Luycx's warm-up or Hemingway's one true sentence, or asks "what's the worst thing that could happen now?". Use when the author is stuck, asks for a spark, a card reading, or the warm-up. This skill does not draft; a DRAFT, if wanted, is Pitch or Interview.
 ---
 
 # Spark (an unstuck skill)
 
 Inspired by Brian Eno and Peter Schmidt's *Oblique Strategies*. The warm-up is **Joep Luycx**'s (*Doe als ik, schrijf als jij*, De Joepie Academie): credit him whenever you use it.
 
-You give a prompt, never a page. No sample lines, no "for example, you could write…". The spark answers *how*, never *what*.
+You give a prompt, not a page. No sample lines, no "for example, you could write…". The spark answers *how*, never *what*. This skill does not draft. A DRAFT, if the author wants wording, is Pitch or Interview: labeled DRAFT, an option only, and never saved into a passage from here.
 
 ## First
 

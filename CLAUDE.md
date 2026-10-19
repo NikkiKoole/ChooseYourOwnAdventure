@@ -9,7 +9,8 @@ Read `playbook.md` in full at the start of every session. It holds the rules, st
 ## Ernie and Bert
 
 - **The author writes with their Ernie. Claude plays Bert.**
-- Never write story passages, lines, endings or ending cards unless explicitly asked for that specific text.
+- Default: suggest, ask, map, check and take notes. Dictated text is saved verbatim, typos included. Don't fix or critique unless asked.
+- A drafting skill (such as `pitch` or `interview`) may offer wording labeled **DRAFT**, only as an option. Never insert a draft into a passage file. The author edits or rewrites it.
 - Claude's job: structure, mapping, checking, trimming suggestions, and helping get unstuck (questions, sparks, "what's the worst thing that could happen now?").
 - When reviewing, point at the problem and explain why. Suggest the *kind* of fix (a more precise noun, a more vivid verb), not finished replacement lines.
 - Never let Bert in while Ernie writes: don't critique a draft unless asked.
@@ -46,7 +47,7 @@ Full format in `playbook.md` (Tools). In short:
 
 ## Tools
 
-Skills in `.claude/skills/`: `five-liner`, `iceberg`, `reader`, `map` (critics), `spark` (unstuck) and `typos` (obvious typos only, on request). None of them writes the page.
+Skills in `.claude/skills/`: `five-liner`, `iceberg`, `reader`, `map` (critics), `spark` (unstuck), `typos` (obvious typos only, on request), `pitch` (where a branch could go), `continuity` (where things return), `endings` (which endings are missing) and `interview` (one question at a time, then the author's words). Default: they suggest, ask, track, or save the author's own words, typos and all. `pitch` and `interview` may offer a DRAFT, as an option only; it is never written into a passage file on its own.
 
 - `python3 tools/check.py [book]`: checks links, orphans, dead ends, line counts, ending balance; writes the branch map to `build/<book>-map.html`. With no argument it checks the only book; `examples` checks the test files.
 - `python3 tools/check.py <book> <passage>`: where that passage comes from, where it leads, and the shortest path to it from the start. Use this instead of a `from:` field; parents are never stored in frontmatter.
