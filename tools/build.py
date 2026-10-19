@@ -5,7 +5,8 @@ Usage: python3 tools/build.py [book] [passage]
 
 Page numbers are assigned here (start = page 1, then in reading order), and
 the "Turn to page N" choices and "THE END." are added, as the playbook says.
-Stubs show as "not written yet". Output: build/<book>.html
+A passage with no body text shows as "not written yet", with its note and
+suggestion; its choices still show. Output: build/<book>.html
 
 With a passage id, print that one passage as plain text instead, the way it
 would be printed, for pasting into a chat. Nothing is written.
@@ -56,6 +57,11 @@ def blocks(p):
     return out
 
 
+def unwritten(p):
+    """No body text yet. A stub, or a page that already has choices."""
+    return not p.body.strip()
+
+
 def preview(pid, passages, numbers):
     """One passage as plain text, as printed: headings, THE END., Turn to page N."""
     if pid not in passages:
@@ -64,7 +70,7 @@ def preview(pid, passages, numbers):
     out = [f"Page {numbers[pid]} · {pid} ({p.type}{', ' + p.meta['mood'] if p.meta.get('mood') else ''})", ""]
     if p.meta.get("title"):
         out += [p.meta["title"], ""]
-    if p.is_stub:
+    if unwritten(p):
         out.append("Not written yet.")
         if p.meta.get("note"):
             out.append(f"Note: {p.meta['note']}")
@@ -104,7 +110,7 @@ def main():
             "mood": p.meta.get("mood"),
             "title": p.meta.get("title"),
             "card": p.meta.get("card"),
-            "stub": p.is_stub,
+            "stub": unwritten(p),
             "note": p.meta.get("note"),
             "suggestion": p.meta.get("suggestion"),
             "blocks": blocks(p),
